@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <script src="qrcode.js"></script>
+    <style>
+        #qrcode{
+            /*text-align: center;*/
+            /*display: table-cell;*/
+            /*width: 96px;*/
+            /*height: 96px;*/
+            /*vertical-align:middle;*/
+            /*position: relative;*/
+        }
+    </style>
+</head>
+<body>
+<div id="qrcode">
+</div>
+
+<script>
+    window.onload =function(){
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : 96,//设置宽高
+            height : 96
+        });
+        qrcode.makeCode("http://192.168.0.61:8080/#/kanjiainfo?act_id=2&cut_id=95&u_id=5");
+       
+    }
+
+
+</script>
+</body>
+</html>
